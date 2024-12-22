@@ -2,8 +2,40 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	font-family: "Outfit", serif;
+}
+
+:root {
+	--semi-dark-blue: #161d2f;
+	--pure-white: #FFFFFF;
+	--dark-blue: #10141E;
 }
 
 html {
 	font-size: 62.5%;
+}
+
+body {
+	.nav {
+		background-color: var(--semi-dark-blue);
+
+		&__container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1em 2em;
+		}
+
+		&__subpage {
+			margin-right: 0.8em;
+			margin-left: 0.8em;
+		}
+
+		&__avatar {
+			width: 30px;
+			height: 30px;
+			border: 1px solid var(--pure-white);
+			border-radius: 50%;
+		}
+	}
 }
