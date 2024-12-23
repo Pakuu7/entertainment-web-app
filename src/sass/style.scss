@@ -9,6 +9,7 @@
 	--semi-dark-blue: #161d2f;
 	--pure-white: #FFFFFF;
 	--dark-blue: #10141E;
+	--light-gray: #979797;
 }
 
 html {
@@ -41,7 +42,7 @@ body {
 	}
 	
 	.main {
-		padding: 1em 2em;
+		padding: 2em 2em;
 		&__search-container {
 			display: flex;
 			align-items: center;
@@ -60,6 +61,116 @@ body {
 			&::placeholder {
 				margin-left: 1em;
 			}
+		}
+
+		&__trending-title-container, &__recommended-title-container{
+			margin-top: 2em;
+		}
+
+		&__trending-title, &__recommended-title {
+			color: var(--pure-white);
+			font-size: 2.4rem;
+			font-weight: 300;
+		}
+
+		&__trending-movies {
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			margin-top: 2em;
+			overflow-x: scroll;
+			scroll-behavior: smooth;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+
+		&__trending-movie {
+			position: relative;
+			flex-shrink: 0;
+			margin-right: 1em;
+			max-width: 300px;
+			cursor: pointer;
+		}
+
+		
+		&__trending-movie-photo, &__recommended-movie-photo {
+			border-radius: 12px;
+			width: 100%;
+		}
+
+		&__trending-movie-bookmark-container, &__recommended-movie-bookmark-container {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			padding: 1.8rem;
+			width: 1rem;
+			height: 1rem;
+			border-radius: 100%;
+			background-color: rgba(#979797, 0.6);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&__trending-movie-bookmark, &__recommended-movie-bookmark {
+			font-size: 1.4rem;
+		}
+
+		&__trending-movie-info-container {
+			position: absolute;
+			bottom: 30px;
+			left: 20px;
+			color: var(--pure-white);
+			z-index: 1000;
+		}
+
+		&__trending-movie-info-top, &__recommended-movie-info-top {
+			display: flex;
+			align-items: center;
+			font-size: 1.4rem;
+			font-weight: 200;
+		}
+
+		&__trending-movie-info-bottom, &__recommended-movie-info-bottom {
+			font-size: 2rem;
+			font-weight: 500;
+		}
+
+		&__trending-movie-year, &__recommended-movie-year {
+			margin-right: .4em;
+		}
+
+		&__trending-movie-category-icon, &__recommended-movie-category-icon {
+			margin-left: .4em;
+		}
+
+		&__trending-movie-category-name, &__recommended-movie-category-name {
+			margin-left: .2em;
+			margin-right: .4em;
+		}
+
+		&__trending-movie-rating, &__recommended-movie-rating {
+			margin-left: .4em;
+		}
+
+		&__recommended-movies {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 16px;
+			width: 100%;
+			margin-top: 2em;
+		}
+		
+		&__recommended-movie {
+			position: relative;
+			cursor: pointer;
+		}
+
+		&__recommended-movie-info-container {
+			margin-top: .6em;
+			color: var(--pure-white);
 		}
 	}
 }
