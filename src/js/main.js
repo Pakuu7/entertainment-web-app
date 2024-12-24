@@ -10,8 +10,7 @@ const foundTitlePlurality = document.querySelector('.main__found-title-plurality
 const foundTitleName = document.querySelector('.main__found-title-name')
 
 let scrollAmount = 0
-const slideWidth = 310
-const delay = 2300
+
 
 fetch('./data.json')
 	.then(response => response.json())

@@ -21,9 +21,9 @@ html {
 
 body {
 	background: var(--dark-blue);
-
-	@import 'components/nav';
 	
+	@import 'components/nav';
+
 	.main {
 		padding: 2em 2em;
 		&__search-container {
@@ -46,35 +46,19 @@ body {
 			}
 		}
 
-		&__trending-title-container,
-		&__recommended-title-container,
+		&__movies-title-container,
 		&__found-title-container {
 			margin-top: 2em;
 		}
 
-		&__trending-title,
-		&__recommended-title,
+		&__movies-title,
 		&__found-title {
 			color: var(--pure-white);
 			font-size: 2.4rem;
 			font-weight: 300;
 		}
 
-		&__trending-movies {
-			display: flex;
-			align-items: center;
-			flex-direction: row;
-			margin-top: 2em;
-			overflow-x: scroll;
-			scroll-behavior: smooth;
-
-			&::-webkit-scrollbar {
-				display: none;
-			}
-		}
-
-		&__trending-movies-play-container,
-		&__recommended-movies-play-container,
+		&__movies-movies-play-container,
 		&__found-movies-play-container {
 			position: absolute;
 			top: 50%;
@@ -89,36 +73,20 @@ body {
 			transition: opacity 0.3s ease, transform 0.3s ease;
 		}
 
-		&__trending-movies-text,
-		&__recommended-movies-text,
+		&__movies-movies-text,
 		&__found-movies-text {
 			font-size: 1.8rem;
 			margin-left: 0.6em;
 			color: var(--pure-white);
 		}
 
-		&__trending-movie {
-			position: relative;
-			flex-shrink: 0;
-			margin-right: 1em;
-			max-width: 300px;
-			cursor: pointer;
-
-			&:hover .main__trending-movies-play-container {
-				opacity: 1;
-				transform: translate(-50%, -50%) scale(1);
-			}
-		}
-
-		&__trending-movie-photo,
-		&__recommended-movie-photo,
+		&__movies-movie-photo,
 		&__found-movie-photo {
 			border-radius: 12px;
 			width: 100%;
 		}
 
-		&__trending-movie-bookmark-container,
-		&__recommended-movie-bookmark-container,
+		&__movies-movie-bookmark-container,
 		&__found-movie-bookmark-container {
 			position: absolute;
 			top: 8px;
@@ -133,22 +101,12 @@ body {
 			align-items: center;
 		}
 
-		&__trending-movie-bookmark,
-		&__recommended-movie-bookmark,
+		&__movies-movie-bookmark,
 		&__found-movie-bookmark {
 			font-size: 1.2rem;
 		}
 
-		&__trending-movie-info-container {
-			position: absolute;
-			bottom: 30px;
-			left: 20px;
-			color: var(--pure-white);
-			z-index: 1000;
-		}
-
-		&__trending-movie-info-top,
-		&__recommended-movie-info-top,
+		&__movies-movie-info-top,
 		&__found-movie-info-top {
 			display: flex;
 			align-items: center;
@@ -156,39 +114,34 @@ body {
 			font-weight: 200;
 		}
 
-		&__trending-movie-info-bottom,
-		&__recommended-movie-info-bottom,
+		&__movies-movie-info-bottom,
 		&__found-movie-info-bottom {
 			font-size: 1.4rem;
 			font-weight: 500;
 		}
 
-		&__trending-movie-year,
-		&__recommended-movie-year,
+		&__movies-movie-year,
 		&__found-movie-year {
 			margin-right: 0.4em;
 		}
 
-		&__trending-movie-category-icon,
-		&__recommended-movie-category-icon,
+		&__movies-movie-category-icon,
 		&__found-movie-category-icon {
 			margin-left: 0.4em;
 		}
 
-		&__trending-movie-category-name,
-		&__recommended-movie-category-name,
+		&__movies-movie-category-name,
 		&__found-movie-category-name {
 			margin-left: 0.2em;
 			margin-right: 0.4em;
 		}
 
-		&__trending-movie-rating,
-		&__recommended-movie-rating,
+		&__movies-movie-rating,
 		&__found-movie-rating {
 			margin-left: 0.4em;
 		}
 
-		&__recommended-movies,
+		&__movies-container,
 		&__found-movies {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
@@ -197,13 +150,13 @@ body {
 			margin-top: 2em;
 		}
 
-		&__recommended-movie,
+		&__movie,
 		&__found-movie {
 			position: relative;
 			cursor: pointer;
 			margin-bottom: 3em;
 
-			&:hover .main__recommended-movies-play-container {
+			&:hover .main__movies-movies-play-container {
 				opacity: 1;
 				transform: translate(-50%, -50%) scale(1);
 			}
@@ -214,7 +167,7 @@ body {
 			}
 		}
 
-		&__recommended-movie-info-container,
+		&__movies-movie-info-container,
 		&__found-movie-info-container {
 			position: absolute;
 			margin-top: 0.6em;

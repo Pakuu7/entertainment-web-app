@@ -3,12 +3,57 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-		<title>Frontend Mentor | Entertainment web app</title>
+		<title>Entertainment Web App - Movies</title>
+		<link rel="stylesheet" href="/dist/css/movies.min.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet" />
 	</head>
 	<body>
-		Search for movies Movies
-
-		<!-- Display all movies -->
+		<nav class="nav">
+			<div class="nav__container">
+				<div class="nav__logo-container">
+					<img src="dist/img/assets/logo.svg" class="nav__logo" alt="Logo" />
+				</div>
+				<div class="nav__subpages-container">
+					<a href="index.html" class="nav__subpage nav__subpage--home">
+						<img src="dist/img/assets/icon-nav-home.svg" alt="Navigate to home" />
+					</a>
+					<a href="movies.html" class="nav__subpage nav__subpage--movies">
+						<img src="dist/img/assets/icon-nav-movies.svg" alt="Navigate to movies" />
+					</a>
+					<a href="#" class="nav__subpage nav__subpage--tv-series">
+						<img src="dist/img/assets/icon-nav-tv-series.svg" alt="Navigate to tv series" />
+					</a>
+					<a href="#" class="nav__subpage nav__subpage--bookmark">
+						<img src="dist/img/assets/icon-nav-bookmark.svg" alt="Navigate to bookmark" />
+					</a>
+				</div>
+				<div class="nav__avatar-container">
+					<img src="dist/img/assets/image-avatar.png" class="nav__avatar" alt="User profile avatar" />
+				</div>
+			</div>
+		</nav>
+		<main class="main">
+			<div class="main__search-container">
+				<img src="dist/img/assets/icon-search.svg" class="main__search-img" alt="Search your film" />
+				<input type="text" class="main__search-input" placeholder="Search for movies or TV series" />
+			</div>
+			<div class="main__movies">
+				<div class="main__movies-title-container">
+					<h2 class="main__movies-title">Movies</h2>
+				</div>
+				<div class="main__movies-container"></div>
+			</div>
+			<div class="main__found not-active">
+				<div class="main__found-title-container">
+					<h2 class="main__found-title">Found <span class="main__found-title-pieces">2</span> <span class="main__found-title-plurality"></span> for '<span class="main__found-title-name">Earth</span>'</h2>
+				</div>
+				<div class="main__found-movies"></div>
+			</div>
+		</main>
+		<script src="/dist/js/movies.min.js"></script>
 	</body>
 </html>

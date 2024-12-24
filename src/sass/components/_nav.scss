@@ -1,0 +1,22 @@
+.nav {
+    background-color: var(--semi-dark-blue);
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 2em;
+    }
+
+    &__subpage {
+        margin-right: 0.8em;
+        margin-left: 0.8em;
+    }
+
+    &__avatar {
+        width: 3rem;
+        height: 3rem;
+        border: 1px solid var(--pure-white);
+        border-radius: 50%;
+    }
+}
